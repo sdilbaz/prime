@@ -589,7 +589,7 @@ BatchRun <- function (countries                       = -1,
                                     birthcohort == years[y]]
 
     # adjust vaccine efficacy for 1-dose
-    if (.t_data.batch$vaccine == "HPV_1D") {
+    if (!is.null(.t_data.batch$vaccine) && .t_data.batch$vaccine == "HPV_1D") {
 
       vaccine_efficacy_beforesexdebut <- 0.975
 
